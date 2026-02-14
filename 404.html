@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>404 - 客室が見つかりません</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background: #000;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .error-container {
+        text-align: center;
+      }
+      h1 {
+        font-family: "Gruppo", sans-serif;
+        font-size: 3rem;
+        letter-spacing: 0.5em;
+        margin-bottom: 1rem;
+        opacity: 0.7;
+      }
+      p {
+        font-family: "serif";
+        font-size: 0.9rem;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .back-link {
+        margin-top: 2rem;
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+        padding-bottom: 5px;
+        font-size: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <h1>404</h1>
+      <p>この客室は存在しません。あるいは、既に予約が埋まっています。</p>
+      <a href="/" class="back-link">宿に戻る</a>
+    </div>
+  </body>
+</html>

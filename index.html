@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="icon" href="image/favicon.png" />
+    <link rel="apple-touch-icon" href="image/favicon.png" />
+
+    <meta property="og:title" content="暗夜客室 1:00am" />
+    <meta
+      property="og:description"
+      content="Serial Experiments Lain をモチーフにした静かな夜の客室。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://あなたのドメイン.com/" />
+    <meta property="og:image" content="image/ogp.jpg" />
+    <meta property="og:site_name" content="暗夜客室 1:00am" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="暗夜客室 1:00am" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="image/ogp.jpg" />
+    <title>暗夜客室 1:00am</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div id="loading-screen">
+      <div class="loading-content">
+        <div class="loading-text">客室準備中</div>
+        <div class="loading-bar-container">
+          <div id="loading-bar"></div>
+        </div>
+      </div>
+    </div>
+    
+    <noscript>
+      <div class="noscript">
+        <p>このサイトを閲覧するにはJavaScriptを有効にする必要があります。</p>
+      </div>
+    </noscript>
+
+    <svg style="display: none">
+      <filter id="mist-filter">
+        <feTurbulence
+          id="turbulence"
+          type="fractalNoise"
+          baseFrequency="3.1 4.8"
+          numOctaves="1"
+          seed="1"
+        />
+        <feDisplacementMap in="SourceGraphic" scale="50" />
+      </filter>
+    </svg>
+
+    <canvas id="canvas"></canvas>
+
+    <div id="sound-control" class="sound-btn">
+      <span class="sound-text">ON</span>
+    </div>
+
+    <div id="ui-wrapper">
+      <header class="fixed-ui hero">
+        <nav class="menu-top">
+          <ul>
+            <li>Room</li>
+            <li>Room Key</li>
+            <li>Resident</li>
+            <li>Owner</li>
+          </ul>
+        </nav>
+        <div class="title-bottom">
+          <h1>暗夜客室 1:00am</h1>
+          <span class="title-en" style="display: block; text-align: center"
+            >Midnight Guest Room</span
+          >
+        </div>
+      </header>
+
+      <section class="section content-section s-hero" id="room"></section>
+
+      <section class="section content-section s1" id="room-key">
+        <div class="inner">
+          <h2 class="section-title">Room Key</h2>
+          <div class="section-body">
+            <p>
+              静かな冬の温泉宿、そして穏やかに更ける夜。<br />温かいけれど、どこか寂しくて凍みる客室。
+            </p>
+            <p>
+              「郷愁」「安らぎ」「憧憬」<br />
+              私の記憶と理想が混ざり合った情景を、8畳間の一室に再現しました。
+            </p>
+            <p>
+              肌を刺す冷たさと炬燵のぬくもり、そして一見穏やかな空間に潜む小さな違和感を、静かに演出しています。
+            </p>
+          </div>
+          <div class="section-footer">
+            <span class="tech-label">Tech Stack</span>
+            <ul class="tech-stack">
+              <li>Three.js</li>
+              <li>GSAP</li>
+              <li>Blockbench</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section content-section s2" id="resident">
+        <div class="inner">
+          <h2 class="section-title">Resident</h2>
+          <div class="section-body">
+            <p>岩倉玲音 / Iwakura Lain</p>
+            <p>
+              ネットワーク空間「ワイヤード」と現実が溶け合う境界で、世界の真実を辿った少女。
+            </p>
+            <p>
+              コタツで眠る彼女はネットワークの住人なのか、それとも現実世界の岩倉玲音なのか。
+            </p>
+            <p>
+              この空間は、そんな彼女の一瞬を切り取ったプライベートな断片です。
+            </p>
+          </div>
+          <div class="section-footer">
+            <a
+              href="https://www.serial-experiments-lain.com/"
+              target="_blank"
+              class="btn-link"
+              >Official Site</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section content-section s3" id="owner">
+        <div class="inner">
+          <h2 class="section-title">Owner / Shinya</h2>
+          <div class="section-body">
+            <p>この空間を作った人。<br />3DモデリングやWeb制作をしています。</p>
+          </div>
+          <div class="section-footer">
+            <div class="sns-links">
+              <a href="https://x.com/sinsin_chaos" target="_blank">X (Twitter)</a>
+              <a href="https://bsky.app/profile/shinyaxxx.bsky.social" target="_blank">Bluesky</a>
+              <a href="javascript:void(0)" class="btn-link toTop">△</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/",
+          "lil-gui": "https://cdn.jsdelivr.net/npm/lil-gui@0.19/+esm"
+        }
+      }
+    </script>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
