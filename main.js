@@ -109,10 +109,10 @@ function adjustCamera(width, height) {
     if (aspect <= minAspect) {
       camera.fov = 75;
     } else if (aspect >= maxAspect) {
-      camera.fov = 65;
+      camera.fov = 55;
     } else {
       const t = (aspect - minAspect) / (maxAspect - minAspect);
-      camera.fov = 75 + (65 - 75) * t;
+      camera.fov = 75 + (55 - 75) * t;
     }
   }
   camera.updateProjectionMatrix(); 

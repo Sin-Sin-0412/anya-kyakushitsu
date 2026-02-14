@@ -18,7 +18,7 @@ let cameraTime = 0;
 
 export function initWorld(onLoadComplete) {
 
-  camera.lookAt(0, 2.2, 0);
+  camera.lookAt(0, 2.5, 0);
 
   const lightColors = {
     hemisphereSky: 0x0d0e35,
