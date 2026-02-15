@@ -128,7 +128,7 @@ export function initWorld(onLoadComplete) {
   };
 
   const loader = new GLTFLoader(manager);
-  loader.load("model/lain2.glb", (gltf) => {
+  loader.load("model/lain.glb", (gltf) => {
     const model = gltf.scene;
     model.rotation.y = Math.PI;
 
